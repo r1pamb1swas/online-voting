@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Voting System</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#f4f6fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------- NAVBAR ---------- */
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+    background:#1e3a8a;
+    height:64px;
+    padding:0 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+/* Left */
+
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    width:34px;
+    height:34px;
+    object-fit:contain;
+}
+
+.site-title{
+    font-size:18px;
+    font-weight:600;
+    letter-spacing:0.5px;
+}
+
+/* Right */
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.nav-right a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    padding:8px 14px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+/* Hover effect */
+
+.nav-right a:hover{
+    background:#2563eb;
+}
+
+
+/* ---------- LAYOUT ---------- */
+
+.main-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:40px;
+}
+
+/* ---------- LOGIN CARD ---------- */
+
+#bodysection{
+    background:white;
+    width:320px;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+input,select{
+    width:100%;
+    padding:8px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+#loginbtn{
+    width:100%;
+    padding:10px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:5px;
+}
+
+#loginbtn:hover{
+    background:#1d4ed8;
+}
+
+/* ---------- INFO SECTION ---------- */
+
+.info-section{
+    width:450px;
+}
+
+.info-section h2{
+    color:#1e3a8a;
+}
+
+.info-card{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom:15px;
+    display:flex;
+    gap:15px;
+    align-items:center;
+}
+
+.info-card img{
+    width:70px;
+    height:70px;
+    border-radius:10px;
+}
+
+a{
+    text-decoration:none;
+    color:#2563eb;
+}
+/* ---------- INFO BOX SECTIONS ---------- */
+
+.section-box{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    margin:60px 120px;
+}
+
+.section-box h2{
+    color:#1e3a8a;
+    margin-bottom:10px;
+}
+
+.section-box p{
+    line-height:1.6;
+    color:#333;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer{
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+}
+
+.footer a{
+    color:#c7d2fe;
+    text-decoration:none;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+
+    <div class="nav-left">
+        <img src="images/logo.png" class="logo">
+        <span class="site-title">Online Voting System</span>
+    </div>
+
+<div class="nav-right">
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="routes/register.html">Register</a>
+</div>
+
+
+</div>
+
+
+<div class="main-container">
+
+<!-- LOGIN SECTION -->
+<div id="bodysection">
+
+<form action="./api/login.php" method="POST">
+
+<h2>Login</h2><br>
+
+<input type="text" placeholder="Username" name="username"> <br><br>
+
+
+<input type="password" placeholder="Enter password" name="password" required><br><br>
+
+
+
+<button id="loginbtn" type="submit">Login</button><br><br>
+
+New user?
+<a href="routes/register.html">Register here</a>
+
+</form>
+
+</div>
+
+<!-- INFO SECTION -->
+<div class="info-section">
+
+<h2>Why Use e-Voting?</h2>
+
+<div class="info-card">
+    <img src="images/secure.jpg">
+    <div>
+        <h4>Secure Voting</h4>
+        <p>Votes are safely stored in the system and cannot be altered.</p>
+    </div>
+</div>
+
+<div class="info-card">
+    <img src="images/fast.jpg">
+    <div>
+        <h4>Fast Results</h4>
+        <p>Instant counting of votes without manual effort.</p>
+    </div>
+</div>
+
+<div class="info-card">
+    <img src="images/remote.jpg">
+    <div>
+        <h4>Vote From Anywhere</h4>
+        <p>Users can vote online from any location.</p>
+    </div>
+</div>
+
+<div class="info-card">
+    <img src="images/eco.jpg">
+    <div>
+        <h4>Eco Friendly</h4>
+        <p>Paperless voting helps save the environment.</p>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div id="about" class="section-box">
+
+<h2>About Us</h2>
+
+<p>
+The Online Voting System is a secure and user-friendly web application
+developed as part of an academic project to demonstrate the practical
+use of web technologies.
+</p>
+
+<p>
+This system allows users to vote online, ensures transparency,
+and provides fast and accurate results. The main objective of this
+project is to reduce manual effort, save time, and make voting
+accessible from anywhere.
+</p>
+
+</div>
+<div id="contact" class="section-box">
+
+<h2>Contact Us</h2>
+
+<p>
+If you have any questions, feedback, or suggestions regarding this project,
+feel free to contact us.
+</p>
+
+<p>
+<b>Email:</b> support@onlinevotingsystem.com <br>
+<b>Phone:</b> +91-XXXXXXXXXX
+</p>
+
+</div>
+
+
+
+<div class="footer">
+<p>© 2024 Online Voting System | Academic Project</p>
+</div>
+
+</body>
+</html>

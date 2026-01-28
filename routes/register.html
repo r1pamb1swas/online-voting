@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register | Online Voting System</title>
+
+<style>
+
+/* ===== BASE ===== */
+
+body{
+    margin:0;
+    background:#f4f6fb;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#0f172a;
+}
+
+/* ===== NAVBAR (SAME AS DASHBOARD) ===== */
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:18px;
+    font-weight:600;
+    letter-spacing:0.5px;
+}
+
+.navbar{
+    background:#1e3a8a;
+    height:64px;
+    padding:0 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+}
+.logo{
+    width:34px;
+    height:34px;
+    object-fit:contain;
+}
+
+
+
+.nav-right a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    padding:8px 14px;
+    border-radius:6px;
+    background:#2563eb;
+}
+
+.nav-right a:hover{
+    background:#1d4ed8;
+}
+
+/* ===== CENTER LAYOUT ===== */
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:calc(100vh - 64px);
+}
+
+/* ===== REGISTER CARD (MATCH LOGIN CARD SIZE) ===== */
+
+.card{
+    background:white;
+    width:360px;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ===== HEADINGS ===== */
+
+.card h2{
+    text-align:center;
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+/* ===== INPUTS (MATCH LOGIN) ===== */
+
+input,select{
+    width:100%;
+    padding:9px;
+    border-radius:6px;
+    border:1px solid #cbd5f5;
+    margin-bottom:12px;
+    font-size:14px;
+}
+
+/* ===== BUTTON ===== */
+
+#regbtn{
+    width:100%;
+    padding:10px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:15px;
+    cursor:pointer;
+}
+
+#regbtn:hover{
+    background:#1d4ed8;
+}
+
+/* ===== LINK ===== */
+
+.login-link{
+    text-align:center;
+    margin-top:15px;
+}
+
+.login-link a{
+    color:#2563eb;
+    text-decoration:none;
+}
+.footer{
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+}
+
+.footer a{
+    color:#c7d2fe;
+    text-decoration:none;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    
+    <div class="nav-left">
+        <img src="../images/logo.png" class="logo">
+        <span class="site-title">Online Voting System</span>
+    </div>
+
+   
+    <div class="nav-right">
+        <a href="../index.html">Home</a>
+    </div>
+</div>
+
+<!-- FORM AREA -->
+<div class="container">
+
+<div class="card">
+
+<h2>Create Account</h2>
+
+<form action="../api/register.php" method="post" enctype="multipart/form-data">
+
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="text" name="username" placeholder="Username" required>
+
+
+<input type="number" name="mobile" placeholder="Mobile Number" required>
+
+<input type="password" name="password" placeholder="Password" required>
+
+<input type="password" name="cpassword" placeholder="Confirm Password" required>
+
+<input type="text" name="address" placeholder="Address" required>
+
+<input type="file" name="photo" required>
+
+<input type="hidden" name="role" value="1">
+
+</select>
+
+<button id="regbtn" type="submit">Register</button>
+
+<div class="login-link">
+Already registered? <a href="../index.html">Login</a>
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<div class="footer">
+<p>© 2024 Online Voting System | Academic Project</p>
+</div>
+</body>
+</html>

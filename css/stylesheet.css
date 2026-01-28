@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+/* ---------- HEADER ---------- */
+
+#headersection{
+    background-color: #1e90ff;
+    color: white;
+    padding: 20px;
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+/* ---------- BODY SECTION ---------- */
+
+#bodysection{
+    background-color: white;
+    width: 30%;
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+/* ---------- INPUTS ---------- */
+
+input{
+    padding: 8px;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+select{
+    padding: 8px;
+    width: 95%;
+    border-radius: 5px;
+}
+
+/* ---------- BUTTONS ---------- */
+
+button{
+    padding: 10px;
+    width: 100px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: darkorange;
+}
+
+/* ---------- LOGIN BUTTON ---------- */
+
+#loginbtn{
+    width: 100%;
+}
+
+/* ---------- REGISTER BUTTON ---------- */
+
+#regbtn{
+    width: 100%;
+}
+
+/* ---------- LINKS ---------- */
+
+a{
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/* ---------- DASHBOARD ---------- */
+
+#mainSection{
+    padding: 10px;
+}
+
+#profile{
+    background-color: white;
+    width: 30%;
+    padding: 20px;
+    float: left;
+}
+
+#group{
+    background-color: white;
+    width: 55%;
+    padding: 20px;
+    float: right;
+}
+
+#votebtn{
+    background-color: orange;
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+#voted{
+    background-color: green;
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+/* ---------- IMAGES ---------- */
+
+img{
+    border-radius: 50%;
+}
+
+/* ---------- CLEAR FLOAT ---------- */
+
+hr{
+    clear: both;
+}
